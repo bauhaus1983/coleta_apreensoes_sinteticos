@@ -342,7 +342,7 @@ FONTES = {"pf": fonte_pf, "prf": fonte_prf, "receita": fonte_receita,
 # ----------------------------------------------------------------------------- leitura da notícia
 def ler_noticia(http: Http, c: dict) -> tuple[str, str]:
     """Devolve (url_final, texto). Para links do Google Notícias tenta resolver o endereço real."""
-    url = _resolver_gnews(c["url"])
+    url = _resolver_gnews(c["url"], http)
     r = http.get(url)
     if not r or "news.google.com" in r.url:
         return url, f"{c['titulo']}. {c['resumo']}"          # sem texto completo: usa título+resumo
@@ -675,30 +675,62 @@ def executar(args):
 
 
 # ----------------------------------------------------------------------------- modo sem custo
-GN_STATUS = {"ok": 0, "falha": 0, "sem_pacote": False}
+GN_STATUS = {"ok": 0, "falha": 0}
+GN_SOCS = "CAESEwgDEgk0ODE3Nzk3MjQaAmVuIAEaBgiA_LyaBg"   # registro de consentimento: evita a tela de cookies do Google
 
 
-def _resolver_gnews(url: str) -> str:
-    """Converte link do Google Notícias no endereço real da matéria (pacote googlenewsdecoder)."""
-    if "news.google.com" not in url:
+def _gn_id(url: str):
+    m = re.search(r"news\.google\.com/(?:rss/)?(?:articles|read)/([^?/#]+)", url or "")
+    return m.group(1) if m else None
+
+
+def _resolver_gnews(url: str, http: "Http") -> str:
+    """Converte link do Google Notícias no endereço real da matéria, sem pacotes externos.
+    1) abre a página do artigo e lê a assinatura (data-n-a-sg) e o carimbo (data-n-a-ts);
+    2) consulta o serviço batchexecute do Google, que devolve a URL do veículo."""
+    gid = _gn_id(url)
+    if not gid:
         return url
     try:
-        from googlenewsdecoder import gnewsdecoder
-    except ImportError:
-        GN_STATUS["sem_pacote"] = True
-        return url
-    try:
-        try:
-            d = gnewsdecoder(url, interval=1)      # intervalo evita bloqueio por excesso de chamadas
-        except TypeError:
-            d = gnewsdecoder(url)
-        if d.get("status") and d.get("decoded_url"):
-            GN_STATUS["ok"] += 1
-            return d["decoded_url"]
+        ts = sig = None
+        for base in ("https://news.google.com/articles/", "https://news.google.com/rss/articles/"):
+            r = http.get(base + gid, cookies={"SOCS": GN_SOCS})
+            if not r:
+                continue
+            el = BeautifulSoup(r.text, "html.parser").find(attrs={"data-n-a-sg": True})
+            if el:
+                ts, sig = el.get("data-n-a-ts"), el.get("data-n-a-sg")
+                break
+        if ts and sig:
+            req = ["Fbv4je", '["garturlreq",[["X","X",["X","X"],null,null,1,1,"US:en",null,1,null,null,null,null,null,0,1],'
+                             f'"X","X",1,[1,1,1],1,1,null,0,0,null,0],"{gid}",{ts},"{sig}"]']
+            resp = http.s.post("https://news.google.com/_/DotsSplashUi/data/batchexecute",
+                               data="f.req=" + quote_plus(json.dumps([[req]])),
+                               headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"},
+                               cookies={"SOCS": GN_SOCS}, timeout=25)
+            dados = json.loads(resp.text.split("\n\n")[1])[:-2]
+            real = json.loads(dados[0][2])[1]
+            if real and real.startswith("http"):
+                GN_STATUS["ok"] += 1
+                return real
     except Exception as e:
-        log.debug("gnews: %s", e)
+        log.debug("gnews %s: %s", gid, e)
     GN_STATUS["falha"] += 1
     return url
+
+
+def testar_gnews():
+    """Autoteste: pega 3 links reais do Google Notícias e tenta convertê-los."""
+    http = Http()
+    r = http.get("https://news.google.com/rss/search?q=" + quote_plus("PRF apreende drogas") + "&hl=pt-BR&gl=BR&ceid=BR:pt-419")
+    if not r:
+        print("AUTOTESTE: não foi possível ler o RSS do Google Notícias.")
+        return
+    links = [it.findtext("link") for it in ET.fromstring(r.content).iter("item")][:3]
+    for u in links:
+        real = _resolver_gnews(u, http)
+        print(("OK    " if "news.google.com" not in real else "FALHA ") + real[:120])
+    print(f"AUTOTESTE Google Notícias: {GN_STATUS['ok']} de {len(links)} convertidos.")
 
 
 def extrair_texto(html: str) -> str:
@@ -733,7 +765,7 @@ def modo_links(http, fila, est, desde, cont, seco, base):
     ja = {p["url"] for p in pend} | {p.get("url_original") for p in pend}
     novos, repetidos = [], []
     for c in fila:
-        url = _resolver_gnews(c["url"])
+        url = _resolver_gnews(c["url"], http)
         if url in ja or c["url"] in ja or url in est["urls_vistas"]:
             continue
         ja.add(url)
@@ -764,10 +796,7 @@ def modo_links(http, fila, est, desde, cont, seco, base):
     md = _pendentes_md(pend)
     log.info("Links: %d novos; %d descartados por já estarem no painel; %d pendentes no total (desde %s).",
              len(novos), len(repetidos), len(pend), desde)
-    if GN_STATUS["sem_pacote"]:
-        log.warning("Google Notícias: pacote 'googlenewsdecoder' NÃO instalado; links seguem no formato do Google.")
-    else:
-        log.info("Google Notícias: %d links convertidos, %d falhas.", GN_STATUS["ok"], GN_STATUS["falha"])
+    log.info("Google Notícias: %d links convertidos, %d falhas.", GN_STATUS["ok"], GN_STATUS["falha"])
     if seco:
         print(md)
         return
@@ -870,11 +899,14 @@ def main():
     ap.add_argument("--so-links", action="store_true",
                     help="sem custo: só descobre e filtra; acumula as candidatas em links/pendentes.md")
     ap.add_argument("--limpar-pendentes", action="store_true", help="arquiva links/pendentes.* e encerra")
+    ap.add_argument("--testar-gnews", action="store_true", help="autoteste da conversão de links do Google Notícias")
     ap.add_argument("-v", "--verboso", action="store_true")
     args = ap.parse_args()
     logging.basicConfig(level=logging.DEBUG if args.verboso else logging.INFO,
                         format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
-    if args.limpar_pendentes:
+    if args.testar_gnews:
+        testar_gnews()
+    elif args.limpar_pendentes:
         limpar_pendentes()
     else:
         executar(args)
