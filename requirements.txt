@@ -1,0 +1,6 @@
+requests>=2.31
+beautifulsoup4>=4.12
+anthropic>=0.40          # extração estruturada (recomendado)
+trafilatura>=1.8         # opcional: texto mais limpo das notícias
+googlenewsdecoder>=0.1   # opcional: abre o texto completo de links do Google Notícias
+# playwright>=1.44       # opcional: plano B para a PRF (depois: playwright install chromium)
