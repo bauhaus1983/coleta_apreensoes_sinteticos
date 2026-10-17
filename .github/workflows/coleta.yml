@@ -1,0 +1,46 @@
+name: coleta-apreensoes
+# Modo sem custo: só descobre e filtra notícias; a extração é feita no chat do Claude.
+on:
+  schedule:
+    - cron: "0 10 * * 1,3,5"   # seg, qua e sex às 7h de Brasília (10h UTC)
+  workflow_dispatch:
+    inputs:
+      acao:
+        description: "O que fazer"
+        type: choice
+        default: coletar links
+        options:
+          - coletar links
+          - limpar pendentes (depois que o Claude processar)
+          - carga do ano (desde 2026-01-01)
+permissions:
+  contents: write
+concurrency: coleta            # nunca duas execuções ao mesmo tempo
+jobs:
+  coleta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Instalar o mínimo necessário
+        run: |
+          pip install --quiet requests beautifulsoup4
+          pip install --quiet googlenewsdecoder || echo "decodificador do Google Notícias indisponível; seguindo sem ele"
+      - name: Executar
+        env:
+          ACAO: ${{ github.event.inputs.acao || 'coletar links' }}
+        run: |
+          case "$ACAO" in
+            "limpar pendentes"*) python coleta.py --limpar-pendentes ;;
+            "carga do ano"*)     python coleta.py --so-links --desde 2026-01-01 ;;
+            *)                   python coleta.py --so-links ;;
+          esac
+      - name: Salvar resultado no repositório
+        run: |
+          git config user.name "coletor"
+          git config user.email "coletor@users.noreply.github.com"
+          git add -A links dados/estado.json
+          git diff --cached --quiet || git commit -m "coleta $(date +%F) – ${{ github.event.inputs.acao || 'agendada' }}"
+          git push
