@@ -347,11 +347,7 @@ def ler_noticia(http: Http, c: dict) -> tuple[str, str]:
     if not r or "news.google.com" in r.url:
         return url, f"{c['titulo']}. {c['resumo']}"          # sem texto completo: usa título+resumo
     html = r.text
-    texto = trafilatura.extract(html, include_comments=False) if trafilatura else None
-    if not texto:
-        soup = BeautifulSoup(html, "html.parser")
-        corpo = soup.find("article") or soup.find(id="content") or soup.body or soup
-        texto = "\n".join(p.get_text(" ", strip=True) for p in corpo.find_all("p"))
+    texto = extrair_texto(html)
     if not c.get("data_pub"):
         m = re.search(r'article:published_time"\s+content="([^"]+)"', html) or \
             re.search(r"Publicado em\s+(\d{2}/\d{2}/\d{4})", html)
@@ -558,8 +554,12 @@ def carregar():
     base = json.loads(ARQ_BASE.read_text("utf-8")) if ARQ_BASE.exists() else []
     if ARQ_ESTADO.exists():
         est = json.loads(ARQ_ESTADO.read_text("utf-8"))
-    else:  # primeira execução: estado derivado da base
-        est = {"ultima_execucao": None, "urls_vistas": sorted({r["fonte_url"] for r in base})}
+    else:  # primeira execução
+        est = {"ultima_execucao": None, "urls_vistas": []}
+    urls_base = {r["fonte_url"] for r in base}
+    for r in base:  # URLs citadas como fontes secundárias também contam como vistas
+        urls_base.update(u for u in r.get("fontes_secundarias", []) if u)
+    est["urls_vistas"] = sorted(set(est.get("urls_vistas", [])) | urls_base)
     nums = [int(m.group(1)) for r in base if (m := re.search(r"-(\d+)$", r["evento_id"]))]
     est["ultimo_evento"] = max([est.get("ultimo_evento", 0), *nums, 0])
     return base, est
@@ -627,7 +627,7 @@ def executar(args):
     cont = {"descobertas": 0, "candidatas": 0, "lidas": 0, "novas": 0, "fundidas": 0, "irrelevantes": 0}
     fila = descobrir(http, args.fontes, desde, vistas, cont)
     if args.so_links:
-        return modo_links(http, fila, est, desde, cont, args.seco)
+        return modo_links(http, fila, est, desde, cont, args.seco, base)
 
     extrair = Extrator(not args.sem_llm)
     novas, fundidas, revisar = [], [], []
@@ -675,62 +675,157 @@ def executar(args):
 
 
 # ----------------------------------------------------------------------------- modo sem custo
+GN_STATUS = {"ok": 0, "falha": 0, "sem_pacote": False}
+
+
 def _resolver_gnews(url: str) -> str:
+    """Converte link do Google Notícias no endereço real da matéria (pacote googlenewsdecoder)."""
     if "news.google.com" not in url:
         return url
     try:
-        from googlenewsdecoder import gnewsdecoder  # opcional
-        d = gnewsdecoder(url)
-        return d["decoded_url"] if d.get("status") else url
-    except Exception:
+        from googlenewsdecoder import gnewsdecoder
+    except ImportError:
+        GN_STATUS["sem_pacote"] = True
         return url
+    try:
+        try:
+            d = gnewsdecoder(url, interval=1)      # intervalo evita bloqueio por excesso de chamadas
+        except TypeError:
+            d = gnewsdecoder(url)
+        if d.get("status") and d.get("decoded_url"):
+            GN_STATUS["ok"] += 1
+            return d["decoded_url"]
+    except Exception as e:
+        log.debug("gnews: %s", e)
+    GN_STATUS["falha"] += 1
+    return url
 
 
-def modo_links(http, fila, est, desde, cont, seco):
-    """Sem API: acumula as candidatas em links/pendentes.(json|md) para extração no chat do Claude."""
+def extrair_texto(html: str) -> str:
+    texto = trafilatura.extract(html, include_comments=False) if trafilatura else None
+    if not texto:
+        soup = BeautifulSoup(html, "html.parser")
+        corpo = soup.find("article") or soup.find(id="content") or soup.body or soup
+        texto = "\n".join(t for p in corpo.find_all("p") if len(t := p.get_text(" ", strip=True)) > 40)
+    return re.sub(r"\s+", " ", texto or "").strip()
+
+
+def _ja_na_base(texto: str, data_pub, substancias: list, base: list):
+    """Devolve o evento da base que a notícia provavelmente repete (mesma substância, cidade citada, data próxima)."""
+    if not data_pub:
+        return None
+    t = sem_acento(texto)
+    for r in base:
+        if r["substancia"] not in substancias:
+            continue
+        mun = sem_acento(r.get("municipio", ""))
+        if len(mun) < 4 or mun.startswith("divers") or mun not in t:
+            continue
+        dr = para_data(r["data"])
+        if dr and abs((data_pub - dr).days) <= 5:
+            return r["evento_id"]
+    return None
+
+
+def modo_links(http, fila, est, desde, cont, seco, base):
+    """Sem API: descobre, descarta o que já está na base, lê um trecho e acumula em links/pendentes.(json|md)."""
     pend = json.loads(PEND_JSON.read_text("utf-8")) if PEND_JSON.exists() else []
     ja = {p["url"] for p in pend} | {p.get("url_original") for p in pend}
-    novos = []
+    novos, repetidos = [], []
     for c in fila:
         url = _resolver_gnews(c["url"])
         if url in ja or c["url"] in ja or url in est["urls_vistas"]:
             continue
         ja.add(url)
-        texto = f"{c['titulo']} {c['resumo']}"
-        novos.append({"url": url, "url_original": c["url"], "titulo": c["titulo"],
-                      "data_pub": c["data_pub"].isoformat() if c.get("data_pub") else "",
-                      "fonte": c["fonte"], "tipo": c["tipo"],
-                      "substancias": [k for k, (_, rx) in SUBSTANCIAS.items() if re.search(rx, texto, re.I)],
-                      "descoberto_em": date.today().isoformat()})
+        dp = c.get("data_pub")
+        base_txt = f"{c['titulo']} {c['resumo']}"
+        subs = [k for k, (_, rx) in SUBSTANCIAS.items() if re.search(rx, base_txt, re.I)]
+        dup = _ja_na_base(base_txt, dp, subs, base)
+        trecho = ""
+        if not dup and "news.google.com" not in url:
+            r = http.get(url)
+            if r:
+                txt = extrair_texto(r.text)
+                trecho = txt[:600]
+                subs = subs or [k for k, (_, rx) in SUBSTANCIAS.items() if re.search(rx, txt[:3000], re.I)]
+                dup = _ja_na_base(f"{base_txt} {txt[:3000]}", dp, subs, base)
+        item = {"url": url, "url_original": c["url"], "titulo": c["titulo"],
+                "data_pub": dp.isoformat() if dp else "", "fonte": c["fonte"], "tipo": c["tipo"],
+                "substancias": subs, "trecho": trecho, "descoberto_em": date.today().isoformat()}
+        if dup:
+            item["evento_base"] = dup
+            repetidos.append(item)
+        else:
+            novos.append(item)
     pend += novos
-    est["urls_vistas"] = sorted(set(est["urls_vistas"]) | {n["url_original"] for n in novos} | {n["url"] for n in novos})
+    vistos = {n["url_original"] for n in novos + repetidos} | {n["url"] for n in novos + repetidos}
+    est["urls_vistas"] = sorted(set(est["urls_vistas"]) | vistos)
     est["ultima_execucao"] = date.today().isoformat()
     md = _pendentes_md(pend)
-    log.info("Links: %d novos nesta execução; %d pendentes no total (desde %s).", len(novos), len(pend), desde)
+    log.info("Links: %d novos; %d descartados por já estarem no painel; %d pendentes no total (desde %s).",
+             len(novos), len(repetidos), len(pend), desde)
+    if GN_STATUS["sem_pacote"]:
+        log.warning("Google Notícias: pacote 'googlenewsdecoder' NÃO instalado; links seguem no formato do Google.")
+    else:
+        log.info("Google Notícias: %d links convertidos, %d falhas.", GN_STATUS["ok"], GN_STATUS["falha"])
     if seco:
         print(md)
         return
     DIR_LINKS.mkdir(exist_ok=True)
     PEND_JSON.write_text(json.dumps(pend, ensure_ascii=False, indent=1), "utf-8")
     PEND_MD.write_text(md, "utf-8")
+    if repetidos:  # registro do que foi descartado, para auditoria
+        arq = DIR_LINKS / "descartados_ja_no_painel.json"
+        antigos = json.loads(arq.read_text("utf-8")) if arq.exists() else []
+        arq.write_text(json.dumps((antigos + repetidos)[-2000:], ensure_ascii=False, indent=1), "utf-8")
     est["urls_vistas"] = est["urls_vistas"][-30000:]
     ARQ_ESTADO.parent.mkdir(parents=True, exist_ok=True)
     ARQ_ESTADO.write_text(json.dumps(est, ensure_ascii=False, indent=1), "utf-8")
 
 
+_PARADAS = set("de da do das dos em no na nos nas com por para e o a os as um uma apos sobre mais que pela pelo ao".split())
+
+
+def _palavras(t: str) -> set:
+    return {w for w in re.findall(r"[a-z0-9]+", sem_acento(t)) if len(w) > 2 and w not in _PARADAS}
+
+
+def agrupar(pend: list) -> list:
+    """Junta notícias do mesmo caso: substância em comum, datas a até 3 dias e títulos parecidos."""
+    grupos = []
+    for p in sorted(pend, key=lambda x: (x["tipo"] != "Oficial", x["data_pub"] or "")):
+        wp, dp = _palavras(p["titulo"] + " " + p.get("trecho", "")[:200]), para_data(p["data_pub"])
+        alvo = None
+        for g in grupos:
+            h = g[0]
+            dh = para_data(h["data_pub"])
+            if dp and dh and abs((dp - dh).days) > 3:
+                continue
+            if set(p["substancias"]) and set(h["substancias"]) and not set(p["substancias"]) & set(h["substancias"]):
+                continue
+            wh = _palavras(h["titulo"] + " " + h.get("trecho", "")[:200])
+            if wp and wh and len(wp & wh) / len(wp | wh) >= 0.3:
+                alvo = g
+                break
+        (alvo.append(p) if alvo else grupos.append([p]))
+    return grupos
+
+
 def _pendentes_md(pend: list) -> str:
-    ordem = sorted(pend, key=lambda p: (p["tipo"] != "Oficial", p["data_pub"] or ""), reverse=False)
-    L = [f"# Notícias candidatas — {len(pend)} pendentes (atualizado em {datetime.now():%d/%m/%Y %H:%M})", "",
-         "Cole este conteúdo no chat do Claude e peça: “extraia as apreensões destes links e atualize o painel”.", ""]
-    for tipo in ("Oficial", "Imprensa"):
-        grupo = [p for p in ordem if p["tipo"] == tipo]
-        if not grupo:
-            continue
-        L += [f"## {'Fontes oficiais' if tipo == 'Oficial' else 'Imprensa e sindicatos'} ({len(grupo)})", ""]
-        for p in sorted(grupo, key=lambda p: p["data_pub"] or "", reverse=True):
-            dt = para_data(p["data_pub"])
-            L.append(f"- {dt:%d/%m/%Y} · {p['fonte']} · {p['titulo']} · {', '.join(p['substancias']) or '—'}  \n  {p['url']}"
-                     if dt else f"- s/d · {p['fonte']} · {p['titulo']}  \n  {p['url']}")
+    grupos = agrupar(pend)
+    grupos.sort(key=lambda g: max(x["data_pub"] or "" for x in g), reverse=True)
+    L = [f"# Notícias candidatas — {len(grupos)} casos, {len(pend)} links (atualizado em {datetime.now():%d/%m/%Y %H:%M})", "",
+         "Cole este conteúdo no chat do Claude e peça: “extraia as apreensões destes casos e atualize o painel”.",
+         "Notícias sobre casos que já estão no painel foram descartadas automaticamente.", ""]
+    for i, g in enumerate(grupos, 1):
+        h = g[0]
+        dt = para_data(h["data_pub"])
+        L.append(f"## {i}. {dt:%d/%m/%Y} · {h['titulo']}" if dt else f"## {i}. s/d · {h['titulo']}")
+        L.append(f"Substâncias citadas: {', '.join(h['substancias']) or '—'} · {len(g)} fonte(s)")
+        if h.get("trecho"):
+            L.append(f"> {h['trecho']}")
+        for p in g:
+            L.append(f"- [{p['tipo']}] {p['fonte']}: {p['url']}")
         L.append("")
     return "\n".join(L)
 
