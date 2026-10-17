@@ -27,12 +27,11 @@ jobs:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: requirements-links.txt
-      - name: Instalar dependências (inclui o decodificador do Google Notícias)
+      - name: Instalar dependências
         run: pip install --quiet -r requirements-links.txt
-      - name: Verificar decodificador do Google Notícias
-        run: |
-          python -c "import googlenewsdecoder; print('Decodificador do Google Notícias: instalado')" \
-            || echo "::warning::googlenewsdecoder não instalou; links do Google Notícias virão sem o endereço real"
+      - name: Autoteste da conversão de links do Google Notícias
+        continue-on-error: true
+        run: python coleta.py --testar-gnews
       - name: Executar
         env:
           ACAO: ${{ github.event.inputs.acao || 'coletar links' }}
