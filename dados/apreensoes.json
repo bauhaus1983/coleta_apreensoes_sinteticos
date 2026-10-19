@@ -33,6 +33,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -69,6 +72,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -105,6 +111,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -141,6 +150,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -177,6 +189,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -213,6 +228,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -249,6 +267,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -285,6 +306,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -321,6 +345,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -357,6 +384,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -393,6 +423,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Precursor químico",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -413,7 +446,7 @@
 "qtd_kg": 3.24,
 "qtd_unidades": 3000,
 "unidade": "comprimidos",
-"quantidade": "3,24 kg (3.000 comprimidos)",
+"quantidade": "3.000 comprimidos (3,24 kg)",
 "presos": "Sim",
 "n_presos": 1,
 "arma": "Não informado",
@@ -429,6 +462,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -465,6 +501,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -501,6 +540,48 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
+"sintetica": "Sim"
+},
+{
+"id": "BR26-062-1",
+"evento_id": "BR26-062",
+"data": "2026-04-27",
+"data_br": "27/04/2026",
+"ano": 2026,
+"mes": 4,
+"instituicao": "Polícia Rodoviária Federal",
+"orgaos_envolvidos": "PRF",
+"uf": "RS",
+"municipio": "Torres",
+"local": "Torres/RS",
+"modal": "Rodovia",
+"substancia": "Ecstasy/MDMA",
+"descricao": "Comprimidos de ecstasy em mochila de passageiro de carro de aplicativo de caronas",
+"qtd_kg": 2.5,
+"qtd_unidades": 5000,
+"unidade": "comprimidos",
+"quantidade": "5.000 comprimidos (2,5 kg)",
+"presos": "Sim",
+"n_presos": 1,
+"arma": "Não informado",
+"dinheiro": "Não informado",
+"tipo_fonte": "Imprensa",
+"fonte_nome": "afolhatorres.com.br",
+"fonte_url": "https://afolhatorres.com.br/prf-prende-homem-com-5-mil-comprimidos-de-ecstasy-na-br-101-em-torres/",
+"observacoes": "BR-101. 5 mil comprimidos (2,5 kg) buscados em Florianópolis/SC, com destino a Montevidéu (Uruguai). Preso em flagrante, com antecedentes por tráfico. Texto reproduz nota da PRF.",
+"arma_detalhe": null,
+"dinheiro_valor": null,
+"presos_qtd": "1",
+"armas": "Não informado",
+"dinheiro_txt": "Não informado",
+"classe": "Droga sintética",
+"tipo_ocorrencia": "Tráfico",
+"lote": 7,
+"novo": "Novo",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -537,6 +618,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -573,6 +657,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -609,6 +696,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -645,6 +735,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -681,6 +774,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -717,6 +813,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -753,6 +852,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -789,6 +891,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -825,6 +930,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -861,6 +969,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -897,6 +1008,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -933,6 +1047,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Precursor químico",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -969,6 +1086,87 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
+"sintetica": "Sim"
+},
+{
+"id": "BR26-064-1",
+"evento_id": "BR26-064",
+"data": "2026-06-11",
+"data_br": "11/06/2026",
+"ano": 2026,
+"mes": 6,
+"instituicao": "Polícia Rodoviária Federal",
+"orgaos_envolvidos": "PRF",
+"uf": "MA",
+"municipio": "Porto Franco",
+"local": "Porto Franco/MA",
+"modal": "Rodovia",
+"substancia": "Anfetamina (rebite)",
+"descricao": "Comprimidos de anfetamina com dois caminhoneiros (39 + 12)",
+"qtd_kg": null,
+"qtd_unidades": 51,
+"unidade": "comprimidos",
+"quantidade": "51 comprimidos",
+"presos": "Não informado",
+"n_presos": null,
+"arma": "Não informado",
+"dinheiro": "Não informado",
+"tipo_fonte": "Imprensa",
+"fonte_nome": "brasildotrecho.com.br",
+"fonte_url": "https://brasildotrecho.com.br/2026/06/prf-apreende-rebite-caminhoneiros-br-010-maranhao/",
+"observacoes": "BR-010. Duas abordagens no mesmo dia; um dos motoristas dirigia havia ~24 h sem descanso. Desfecho não informado.",
+"arma_detalhe": null,
+"dinheiro_valor": null,
+"presos_qtd": "Não informado",
+"armas": "Não informado",
+"dinheiro_txt": "Não informado",
+"classe": "Droga sintética",
+"tipo_ocorrencia": "Não informado",
+"lote": 7,
+"novo": "Novo",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
+"sintetica": "Sim"
+},
+{
+"id": "BR26-065-1",
+"evento_id": "BR26-065",
+"data": "2026-06-11",
+"data_br": "11/06/2026",
+"ano": 2026,
+"mes": 6,
+"instituicao": "Polícia Rodoviária Federal",
+"orgaos_envolvidos": "PRF",
+"uf": "MA",
+"municipio": "Imperatriz",
+"local": "Imperatriz/MA",
+"modal": "Rodovia",
+"substancia": "Anfetamina (rebite)",
+"descricao": "Comprimidos de anfetamina (Nobésio Forte) com caminhoneiro",
+"qtd_kg": null,
+"qtd_unidades": 4,
+"unidade": "comprimidos",
+"quantidade": "4 comprimidos",
+"presos": "Não informado",
+"n_presos": null,
+"arma": "Não informado",
+"dinheiro": "Não informado",
+"tipo_fonte": "Imprensa",
+"fonte_nome": "brasildotrecho.com.br",
+"fonte_url": "https://brasildotrecho.com.br/2026/06/prf-apreende-rebite-caminhoneiros-br-010-maranhao/",
+"observacoes": "BR-010. Motorista excedeu o limite de direção; disse ser para uso próprio. Desfecho não informado.",
+"arma_detalhe": null,
+"dinheiro_valor": null,
+"presos_qtd": "Não informado",
+"armas": "Não informado",
+"dinheiro_txt": "Não informado",
+"classe": "Droga sintética",
+"tipo_ocorrencia": "Não informado",
+"lote": 7,
+"novo": "Novo",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1005,6 +1203,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1041,6 +1242,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1077,6 +1281,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1113,6 +1320,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Precursor químico",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1149,6 +1359,9 @@
 "dinheiro_txt": "R$ 3.000",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1185,6 +1398,9 @@
 "dinheiro_txt": "R$ 3.000",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1221,6 +1437,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Precursor químico",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1257,6 +1476,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1293,6 +1515,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1329,6 +1554,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1365,6 +1593,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1401,6 +1632,9 @@
 "dinheiro_txt": "Sim (valor não informado)",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1429,7 +1663,7 @@
 "tipo_fonte": "Oficial",
 "fonte_nome": "gov.br/prf",
 "fonte_url": "https://www.gov.br/prf/pt-br/noticias/prf-apreende-mais-de-93-mil-comprimidos-de-anfetamina-e-realiza-maior-apreensao-da-droga-em-2026",
-"observacoes": "BR-153. Maior apreensão de anfetamina da PRF em 2026, segundo o órgão.",
+"observacoes": "BR-153. Maior apreensão de anfetamina da PRF em 2026, segundo o órgão. Fontes secundárias: gp1.com.br, jornalprimeirapaginato.com (cita “quase 94 mil”).",
 "arma_detalhe": null,
 "dinheiro_valor": null,
 "presos_qtd": "1",
@@ -1437,6 +1671,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1473,6 +1710,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1509,6 +1749,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1545,6 +1788,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1573,7 +1819,7 @@
 "tipo_fonte": "Oficial",
 "fonte_nome": "gov.br/pf",
 "fonte_url": "https://www.gov.br/pf/pt-br/assuntos/noticias/2026/08/pf-e-receita-federal-apreendem-quase-5-kg-de-drogas-sinteticas-em-corumba-ms",
-"observacoes": "4 bolivianos presos nos dois flagrantes do dia (divisão não informada). Destino: Santa Cruz de la Sierra.",
+"observacoes": "4 bolivianos presos nos dois flagrantes do dia (divisão não informada). Destino: Santa Cruz de la Sierra. Fontes secundárias: jornaldanova.com.br, campograndenews.com.br, midiamax.com.br.",
 "arma_detalhe": null,
 "dinheiro_valor": null,
 "presos_qtd": "4",
@@ -1581,6 +1827,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1617,6 +1866,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1653,6 +1905,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1689,6 +1944,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 2,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1725,6 +1983,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1761,6 +2022,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1797,6 +2061,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1833,6 +2100,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 5,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1869,6 +2139,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1905,6 +2178,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1941,6 +2217,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -1977,6 +2256,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2013,6 +2295,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2049,6 +2334,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2085,6 +2373,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 6,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2121,6 +2412,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2157,6 +2451,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2193,6 +2490,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Precursor químico",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2229,6 +2529,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2265,6 +2568,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2301,6 +2607,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2337,6 +2646,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2373,6 +2685,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2409,6 +2724,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Porte para consumo",
+"lote": 4,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2445,6 +2763,9 @@
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
+"lote": 1,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 },
 {
@@ -2481,6 +2802,48 @@
 "dinheiro_txt": "Não informado",
 "classe": "Precursor químico",
 "tipo_ocorrencia": "Tráfico",
+"lote": 3,
+"novo": "",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
+"sintetica": "Sim"
+},
+{
+"id": "BR26-063-1",
+"evento_id": "BR26-063",
+"data": "2026-10-10",
+"data_br": "10/10/2026",
+"ano": 2026,
+"mes": 10,
+"instituicao": "Polícia Rodoviária Federal",
+"orgaos_envolvidos": "PRF",
+"uf": "RJ",
+"municipio": "Casimiro de Abreu",
+"local": "Casimiro de Abreu/RJ",
+"modal": "Rodovia",
+"substancia": "Ecstasy/MDMA",
+"descricao": "Comprimidos semelhantes a ecstasy (composição não confirmada) em automóvel",
+"qtd_kg": 0.2,
+"qtd_unidades": null,
+"unidade": null,
+"quantidade": "0,2 kg",
+"presos": "Não informado",
+"n_presos": null,
+"arma": "Não informado",
+"dinheiro": "Não informado",
+"tipo_fonte": "Imprensa",
+"fonte_nome": "portalozk.com",
+"fonte_url": "https://www.portalozk.com/vaf/noticias/policia/prf-apreende-600-frascos-de-lanca-perfume-e-comprimidos-semelhantes-a-ecstasy-na-br-101/50248/",
+"observacoes": "BR-101, km 206. ~200 g. Também 600 frascos de lança-perfume (fora do painel). Três ocupantes (1 homem de 18 anos e 2 adolescentes) conduzidos à 121ª DP; prisão não informada.",
+"arma_detalhe": null,
+"dinheiro_valor": null,
+"presos_qtd": "Não informado (3 conduzidos, 2 adolescentes)",
+"armas": "Não informado",
+"dinheiro_txt": "Não informado",
+"classe": "Droga sintética",
+"tipo_ocorrencia": "Tráfico",
+"lote": 7,
+"novo": "Novo",
+"atualizado_em": "2026-10-19T11:04:00-03:00",
 "sintetica": "Sim"
 }
 ]
