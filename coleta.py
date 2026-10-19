@@ -467,6 +467,8 @@ def linha_painel(ev: dict, item: dict, evento_id: int, seq: int, c: dict, url: s
     unidade = (item.get("unidade") or "unidades") if un is not None else None
     if classe == "Precursor químico" and kg and kg >= 1000:
         qtd = f"≈ {fmt_num(kg / 1000, 1)} t"
+    elif kg is not None and un is not None and sub == "Ecstasy/MDMA" and str(unidade).startswith("comprimido"):
+        qtd = f"{fmt_num(un, 0)} {unidade} ({fmt_num(kg)} kg)"   # regra do painel: ecstasy conta pelos comprimidos
     elif kg is not None and un is not None:
         qtd = f"{fmt_num(kg)} kg ({fmt_num(un, 0)} {unidade})"
     elif kg is not None:
