@@ -55,6 +55,8 @@ DIR_REL = BASE / "relatorios"
 DIR_LINKS = BASE / "links"
 PEND_JSON = DIR_LINKS / "pendentes.json"
 PEND_MD = DIR_LINKS / "pendentes.md"
+EXTRA_JSON = DIR_LINKS / "fontes_extras.json"   # {evento_id: [{url, titulo, fonte}]} para casos já no painel
+MAX_COMPLEMENTAR = 25                           # buscas complementares por execução
 
 MODELO = os.getenv("MODELO_CLAUDE", "claude-haiku-5-5")
 DATA_MINIMA = date(2026, 1, 1)          # escopo do painel
@@ -501,7 +503,7 @@ def linha_painel(ev: dict, item: dict, evento_id: int, seq: int, c: dict, url: s
         "dinheiro": din, "dinheiro_valor": dval,
         "dinheiro_txt": f"R$ {fmt_num(dval, 0)}" if dval else "Sim (valor não informado)" if din == "Sim" else din,
         "tipo_fonte": c["tipo"], "fonte_nome": c["fonte"] if "gov.br" in url else (urlparse(url).netloc.replace("www.", "") or c["fonte"]),
-        "fonte_url": url, "fontes_secundarias": [], "observacoes": obs[:400],
+        "fonte_url": url, "fontes_secundarias": [], "fontes_extra": [], "observacoes": obs[:400],
         "revisar": bool(c.get("revisar")), "data_coleta": date.today().isoformat(),
     }
 
@@ -791,11 +793,27 @@ def modo_links(http, fila, est, desde, cont, seco, base):
             repetidos.append(item)
         else:
             novos.append(item)
+    # casos novos com uma única fonte: procura outras matérias sobre o mesmo caso
+    feitos = 0
+    for g in agrupar(novos):
+        if len(g) > 1 or feitos >= MAX_COMPLEMENTAR:
+            continue
+        h = g[0]; feitos += 1
+        for f in fontes_complementares(http, h["titulo"], para_data(h["data_pub"]), ja | set(est["urls_vistas"])):
+            ja.add(f["url"])
+            novos.append({**h, "url": f["url"], "url_original": f["url"], "titulo": f["titulo"], "fonte": f["fonte"],
+                          "tipo": "Imprensa", "trecho": "", "complementar": True})
+    log.info("Busca complementar: %d casos consultados.", feitos)
     pend += novos
+    extras = json.loads(EXTRA_JSON.read_text("utf-8")) if EXTRA_JSON.exists() else {}
+    for r in repetidos:                      # notícia de caso já registrado = fonte extra desse caso
+        lst = extras.setdefault(r["evento_base"], [])
+        if r["url"] not in {x["url"] for x in lst}:
+            lst.append({"url": r["url"], "titulo": r["titulo"], "fonte": r["fonte"]})
     vistos = {n["url_original"] for n in novos + repetidos} | {n["url"] for n in novos + repetidos}
     est["urls_vistas"] = sorted(set(est["urls_vistas"]) | vistos)
     est["ultima_execucao"] = date.today().isoformat()
-    md = _pendentes_md(pend)
+    md = _pendentes_md(pend, extras)
     log.info("Links: %d novos; %d descartados por já estarem no painel; %d pendentes no total (desde %s).",
              len(novos), len(repetidos), len(pend), desde)
     log.info("Google Notícias: %d links convertidos, %d falhas.", GN_STATUS["ok"], GN_STATUS["falha"])
@@ -805,6 +823,7 @@ def modo_links(http, fila, est, desde, cont, seco, base):
     DIR_LINKS.mkdir(exist_ok=True)
     PEND_JSON.write_text(json.dumps(pend, ensure_ascii=False, indent=1), "utf-8")
     PEND_MD.write_text(md, "utf-8")
+    EXTRA_JSON.write_text(json.dumps(extras, ensure_ascii=False, indent=1), "utf-8")
     if repetidos:  # registro do que foi descartado, para auditoria
         arq = DIR_LINKS / "descartados_ja_no_painel.json"
         antigos = json.loads(arq.read_text("utf-8")) if arq.exists() else []
@@ -842,7 +861,8 @@ def agrupar(pend: list) -> list:
     return grupos
 
 
-def _pendentes_md(pend: list) -> str:
+def _pendentes_md(pend: list, extras: dict | None = None) -> str:
+    extras = extras or {}
     grupos = agrupar(pend)
     grupos.sort(key=lambda g: max(x["data_pub"] or "" for x in g), reverse=True)
     L = [f"# Notícias candidatas — {len(grupos)} casos, {len(pend)} links (atualizado em {datetime.now():%d/%m/%Y %H:%M})", "",
@@ -856,13 +876,111 @@ def _pendentes_md(pend: list) -> str:
         if h.get("trecho"):
             L.append(f"> {h['trecho']}")
         for p in g:
-            L.append(f"- [{p['tipo']}] {p['fonte']}: {p['url']}")
+            L.append(f"- [{p['tipo']}{' · busca complementar' if p.get('complementar') else ''}] {p['fonte']}: {p['url']}")
         L.append("")
+    if extras:
+        L += ["---", f"# Fontes extras para casos já no painel ({sum(len(v) for v in extras.values())} links)", "",
+              "Acrescentar como fontes adicionais (com link) dos casos indicados.", ""]
+        for eid in sorted(extras):
+            L.append(f"## {eid}")
+            L += [f"- {x['fonte']}: {x['url']}  ({x['titulo']})" for x in extras[eid]]
+            L.append("")
     return "\n".join(L)
+
+
+# ----------------------------------------------------------------------------- fontes complementares
+PALAVRA_SUB = {"Ecstasy/MDMA": "ecstasy", "Metanfetamina": "metanfetamina", "Anfetamina (rebite)": "rebite",
+               "LSD": "LSD", "Selos de composição indefinida": "selos", "Cetamina": "cetamina", "GHB": "GHB",
+               "Outras sintéticas": "drogas sintéticas", "Acetato de etila": "acetato de etila", "Helional": "helional",
+               "Safrol": "safrol", "Outro precursor": "insumo químico"}
+ORG_CURTO = {PF: '"Polícia Federal"', PRF: "PRF", RF: '"Receita Federal"'}
+
+
+def _gn_busca(http, consulta: str, ini: date, fim: date) -> list:
+    q = f"{consulta} after:{ini.isoformat()} before:{fim.isoformat()}"
+    r = http.get(f"https://news.google.com/rss/search?q={quote_plus(q)}&hl=pt-BR&gl=BR&ceid=BR:pt-419")
+    if not r:
+        return []
+    try:
+        raiz = ET.fromstring(r.content)
+    except ET.ParseError:
+        return []
+    out = []
+    for it in raiz.iter("item"):
+        src = it.find("source")
+        out.append({"link": it.findtext("link"), "titulo": re.sub(r"\s+-\s+[^-]+$", "", it.findtext("title") or ""),
+                    "fonte": urlparse(src.get("url")).netloc.replace("www.", "") if src is not None and src.get("url") else ""})
+    return out
+
+
+def fontes_complementares(http, titulo: str, data_pub, excluir: set, max_n: int = 3) -> list:
+    """Outras matérias sobre o mesmo caso: busca pelas palavras do título, em ±3 dias, e exige título parecido."""
+    if not data_pub:
+        return []
+    alvo = _palavras(titulo)
+    chave = sorted((w for w in alvo if not w.isdigit()), key=len, reverse=True)[:5]
+    if len(chave) < 3:
+        return []
+    out = []
+    for it in _gn_busca(http, " ".join(chave), data_pub - timedelta(days=3), data_pub + timedelta(days=4)):
+        w = _palavras(it["titulo"])
+        if not w or len(w & alvo) / len(w | alvo) < 0.3:
+            continue
+        url = _resolver_gnews(it["link"], http)
+        if "news.google.com" in url or url in excluir or url in {x["url"] for x in out}:
+            continue
+        out.append({"url": url, "titulo": it["titulo"], "fonte": it["fonte"] or urlparse(url).netloc.replace("www.", "")})
+        if len(out) >= max_n:
+            break
+    return out
+
+
+def completar_fontes(seco: bool = False, max_casos: int = 80):
+    """Procura 2ª (e 3ª) fonte para os casos do painel que têm só um link. Resultado vai para links/pendentes.md."""
+    base, est = carregar()
+    http = Http()
+    extras = json.loads(EXTRA_JSON.read_text("utf-8")) if EXTRA_JSON.exists() else {}
+    eventos = {}
+    for r in base:
+        eventos.setdefault(r["evento_id"], r)
+    feitos = achados = 0
+    for eid, r in sorted(eventos.items(), key=lambda x: x[1]["data"], reverse=True):
+        urls = {r.get("fonte_url")} | {f["url"] if isinstance(f, dict) else f for f in r.get("fontes_extra", []) + r.get("fontes_secundarias", [])}
+        urls |= {x["url"] for x in extras.get(eid, [])}
+        urls.discard(None)
+        mun = r.get("municipio", "")
+        if len(urls) >= 2 or len(mun) < 3 or sem_acento(mun).startswith("divers") or feitos >= max_casos:
+            continue
+        feitos += 1
+        d = para_data(r["data"])
+        consulta = f'{PALAVRA_SUB.get(r["substancia"], "")} "{mun}" {ORG_CURTO.get(r["instituicao"], "")}'
+        rx_sub = SUBSTANCIAS.get(r["substancia"], ("", r"."))[1]
+        for it in _gn_busca(http, consulta, d - timedelta(days=3), d + timedelta(days=6)):
+            t = it["titulo"]
+            if sem_acento(mun) not in sem_acento(t) or not re.search(rx_sub + r"|apreen|droga", t, re.I):
+                continue
+            url = _resolver_gnews(it["link"], http)
+            if "news.google.com" in url or url in urls:
+                continue
+            urls.add(url); achados += 1
+            extras.setdefault(eid, []).append({"url": url, "titulo": t, "fonte": it["fonte"] or urlparse(url).netloc.replace("www.", "")})
+            if len(urls) >= 3:
+                break
+    log.info("Completar fontes: %d casos consultados; %d links encontrados.", feitos, achados)
+    pend = json.loads(PEND_JSON.read_text("utf-8")) if PEND_JSON.exists() else []
+    md = _pendentes_md(pend, extras)
+    if seco:
+        print(md); return
+    DIR_LINKS.mkdir(exist_ok=True)
+    EXTRA_JSON.write_text(json.dumps(extras, ensure_ascii=False, indent=1), "utf-8")
+    PEND_JSON.write_text(json.dumps(pend, ensure_ascii=False, indent=1), "utf-8")
+    PEND_MD.write_text(md, "utf-8")
 
 
 def limpar_pendentes():
     """Arquiva a lista entregue e começa uma nova (as URLs continuam em estado.json e não voltam)."""
+    if not PEND_JSON.exists() and EXTRA_JSON.exists():
+        PEND_JSON.write_text("[]", "utf-8")
     if not PEND_JSON.exists():
         log.info("Nada a limpar.")
         return
@@ -870,6 +988,8 @@ def limpar_pendentes():
     arq.mkdir(parents=True, exist_ok=True)
     carimbo = f"{datetime.now():%Y-%m-%d_%H%M}"
     PEND_JSON.rename(arq / f"pendentes_{carimbo}.json")
+    if EXTRA_JSON.exists():
+        EXTRA_JSON.rename(arq / f"fontes_extras_{carimbo}.json")
     if PEND_MD.exists():
         PEND_MD.rename(arq / f"pendentes_{carimbo}.md")
     log.info("Pendentes arquivados em %s", arq)
@@ -901,6 +1021,7 @@ def main():
     ap.add_argument("--so-links", action="store_true",
                     help="sem custo: só descobre e filtra; acumula as candidatas em links/pendentes.md")
     ap.add_argument("--limpar-pendentes", action="store_true", help="arquiva links/pendentes.* e encerra")
+    ap.add_argument("--completar-fontes", action="store_true", help="procura 2ª fonte para casos do painel com um só link")
     ap.add_argument("--testar-gnews", action="store_true", help="autoteste da conversão de links do Google Notícias")
     ap.add_argument("-v", "--verboso", action="store_true")
     args = ap.parse_args()
@@ -908,6 +1029,8 @@ def main():
                         format="%(asctime)s %(levelname)s %(message)s", datefmt="%H:%M:%S")
     if args.testar_gnews:
         testar_gnews()
+    elif args.completar_fontes:
+        completar_fontes(args.seco)
     elif args.limpar_pendentes:
         limpar_pendentes()
     else:
