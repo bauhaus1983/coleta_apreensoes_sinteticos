@@ -13,6 +13,7 @@ on:
           - coletar links
           - limpar pendentes (depois que o Claude processar)
           - carga do ano (desde 2026-01-01)
+          - completar fontes do painel (2ª fonte para casos com um só link)
 permissions:
   contents: write
 concurrency: coleta            # nunca duas execuções ao mesmo tempo
@@ -39,6 +40,7 @@ jobs:
           case "$ACAO" in
             "limpar pendentes"*) python coleta.py --limpar-pendentes ;;
             "carga do ano"*)     python coleta.py --so-links --desde 2026-01-01 ;;
+            "completar fontes"*) python coleta.py --completar-fontes ;;
             *)                   python coleta.py --so-links ;;
           esac
       - name: Salvar resultado no repositório
