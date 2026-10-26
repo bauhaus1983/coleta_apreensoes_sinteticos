@@ -1,4 +1,4 @@
-# Notícias candidatas — 1 casos, 2 links (atualizado em 26/10/2026 13:28)
+# Notícias candidatas — 1 casos, 2 links (atualizado em 26/10/2026 16:22)
 
 Cole este conteúdo no chat do Claude e peça: “extraia as apreensões destes casos e atualize o painel”.
 Notícias sobre casos que já estão no painel foram descartadas automaticamente.
