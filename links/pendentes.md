@@ -1,9 +1,24 @@
-# Notícias candidatas — 1 casos, 2 links (atualizado em 26/10/2026 16:22)
+# Notícias candidatas — 4 casos, 6 links (atualizado em 28/10/2026 16:21)
 
 Cole este conteúdo no chat do Claude e peça: “extraia as apreensões destes casos e atualize o painel”.
 Notícias sobre casos que já estão no painel foram descartadas automaticamente.
 
-## 1. 23/10/2026 · Receita Federal e PF apreendem ecstasy em centro de distribuição de remessas em Corumbá e prende quatro pessoas
+## 1. 27/10/2026 · Receita Federal apreende droga usada na fabricação de ecstasy com destino a Rio Grande
+Substâncias citadas: Ecstasy/MDMA · 2 fonte(s)
+> Em uma operação de fiscalização de encomendas enviadas por meio de transportadoras, a Receita Federal apreendeu 100 gramas de MDMA, droga sintética utilizada na produção do ecstasy. O entorpecente foi entregue à Polícia Civil para investigação e descobrir a origem, sendo que o destino era Rio Grande. No início do ano, uma apreensão semelhante vinda do Pará, também foi descoberta pela Receita Federal.
+- [Imprensa] https://ahoradosul.com.br: https://ahoradosul.com.br/conteudos/2026/10/27/receita-federal-apreende-droga-usada-na-fabricacao-de-ecstasy-com-destino-a-rio-grande/
+- [Imprensa] https://www.cliccamaqua.com.br: https://www.cliccamaqua.com.br/noticias/policia/receita-federal-apreende-mdma-encomenda-rio-grande/
+
+## 2. 28/10/2026 · Receita Federal apreende MDMA em encomenda enviada do Pará para Rio Grande
+Substâncias citadas: Ecstasy/MDMA · 1 fonte(s)
+- [Imprensa] https://www.studio.tv.br: https://www.studio.tv.br/2026/10/receita-federal-apreende-mdma-em-encomenda-enviada-do-para-para-rio-grande/
+
+## 3. 27/10/2026 · Receita Federal intercepta encomenda com droga sintética em Rio Grande
+Substâncias citadas: Outras sintéticas · 1 fonte(s)
+> Uma operação de fiscalização de rotina da Receita Federal apreendeu um pacote com 100 gramas de MDMA, substância psicoativa associada à produção de ecstasy na manhã desta terça-feira (27). Em um pacote preto, semelhante aos utilizados no envio de compras realizadas pela internet. O volume saiu do estado do Pará, por meio de uma transportadora, e tinha como destino o município de Rio Grande. Após a apreensão, a substância foi encaminhada à Polícia Civil, responsável pela investigação do caso. O remente e o destinatário do pacote não foram informados pela Polícia Civil, para não atrapalhar no an
+- [Imprensa] https://gauchazh.clicrbs.com.br: https://gauchazh.clicrbs.com.br/zona-sul/seguranca/noticia/2026/10/receita-federal-intercepta-encomenda-com-droga-sintetica-em-rio-grande-cmvr1mk1c00mr016nq2xqptro.html
+
+## 4. 23/10/2026 · Receita Federal e PF apreendem ecstasy em centro de distribuição de remessas em Corumbá e prende quatro pessoas
 Substâncias citadas: Ecstasy/MDMA · 2 fonte(s)
 > Polícia Receita Federal e PF apreendem ecstasy em centro de distribuição de remessas em Corumbá e prende quatro pessoas Sex, 23 Outubro de 2026 | Fonte: Da Redação, com assessoria RFB A Receita Federal do Brasil e a Polícia Federal realizaram, na manhã desta sexta-feira, 23 de outubro, mais uma fiscalização em centros de distribuição de remessas em Corumbá, com apreensão de substância análoga a ecstasy. A atividade contou com a participação de agente canino da Receita Federal, que indicou a presença de substâncias entorpecentes em uma caixa fiscalizada em um dos centros de distribuição, por vo
 - [Imprensa] https://www.correiodecorumbapantanal.com.br: https://www.correiodecorumbapantanal.com.br/policia/receita-federal-e-pf-apreendem-ecstasy-em-centro-de-distribuicao-de-remessas-em-corumba-e-prende-quatro-pessoas
