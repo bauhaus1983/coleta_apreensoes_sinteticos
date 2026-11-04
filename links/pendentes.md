@@ -1,28 +1,48 @@
-# Notícias candidatas — 5 casos, 7 links (atualizado em 02/11/2026 19:54)
+# Notícias candidatas — 9 casos, 13 links (atualizado em 04/11/2026 17:40)
 
 Cole este conteúdo no chat do Claude e peça: “extraia as apreensões destes casos e atualize o painel”.
 Notícias sobre casos que já estão no painel foram descartadas automaticamente.
 
-## 1. 30/10/2026 · Genro de conselheiro afastado foi flagrado com ecstasy e porção de haxixe durante operação da PF
+## 1. 03/11/2026 · PRF apreende mais de 12 kg de drogas, ecstasy e LSD durante abordagem na BR-282
+Substâncias citadas: Ecstasy/MDMA, LSD · 2 fonte(s)
+> A PolÃcia RodoviÃ¡ria Federal (PRF) apreendeu uma grande quantidade de drogas na tarde desta terÃ§a-feira (3), durante uma abordagem na BR-282, em ChapecÃ³, no Oeste de Santa Catarina. Entre os entorpecentes encontrados estavam mais de 12 quilos de skunk e haxixe, alÃ©m de 453 comprimidos de ecstasy e 77 micropontos de LSD. A apreensÃ£o ocorreu apÃ³s os policiais perceberem uma atitude suspeita do motorista. Ao avistar uma viatura da PRF trafegando no sentido contrÃ¡rio, o condutor desviou bruscamente o automÃ³vel para um posto de combustÃveis Ã s margens da rodovia. Logo apÃ³s a manobra, os p
+- [Imprensa] https://wh3.com.br: https://wh3.com.br/noticia/279848/prf-apreende-mais-de-12-kg-de-drogas-ecstasy-e-lsd-durante-abordagem-na-br-282.html
+- [Imprensa] https://portal49.com.br: https://portal49.com.br/policia/prf-apreende-mais-de-12-quilos-de-drogas-ecstasy-e-lsd-na-br-282-8434
+
+## 2. 03/11/2026 · PRF encontra ecstasy, LSD e mais de 12 kg de drogas em carro na BR-282, em SC
+Substâncias citadas: Ecstasy/MDMA, LSD · 2 fonte(s)
+- [Imprensa] https://ocp.news: https://ocp.news/seguranca/prf-encontra-ecstasy-lsd-e-mais-de-12-kg-de-drogas-em-carro-na-br-282-em-sc
+- [Imprensa] https://www.oimagem.com.br: https://www.oimagem.com.br/noticia/21375-seguranca_prf_apreende_12_kg_de_drogas_incluindo_ecstasy_e_lsd_na_br-282_em_chapeco
+
+## 3. 03/11/2026 · PRF apreende ecstasy, LSD, haxixe e 10 quilos de skunk em Chapecó
+Substâncias citadas: Ecstasy/MDMA, LSD · 1 fonte(s)
+- [Imprensa] https://jornaldafronteira.com.br: https://jornaldafronteira.com.br/prf-apreende-ecstasy-lsd-haxixe-e-10-quilos-de-skunk-em-chapeco/
+
+## 4. 03/11/2026 · PRF intercepta carregamento de drogas sintéticas e derivados de maconha na BR-282, em Chapecó
+Substâncias citadas: Outras sintéticas · 1 fonte(s)
+> DI REGIONAL DI PREMIUM DI REGIONAL DI PREMIUM DI Regional Entrar Quero ser Premium! Esqueceu a senha? MENU DI Regional
+- [Imprensa] https://diregional.com.br: https://diregional.com.br/diario-do-iguacu/policia/2026-11-03-prf-intercepta-carregamento-de-drogas-sinteticas-e-derivados-de-maconha-na-br-282-em-chapeco
+
+## 5. 30/10/2026 · Genro de conselheiro afastado foi flagrado com ecstasy e porção de haxixe durante operação da PF
 Substâncias citadas: Ecstasy/MDMA · 1 fonte(s)
 - [Imprensa] https://www.olhardireto.com.br: https://www.olhardireto.com.br/noticias/genro-de-conselheiro-afastado-foi-flagrado-com-ecstasy-e-porcao-de-haxixe-durante-operacao-da-pf
 
-## 2. 27/10/2026 · Receita Federal apreende droga usada na fabricação de ecstasy com destino a Rio Grande
+## 6. 27/10/2026 · Receita Federal apreende droga usada na fabricação de ecstasy com destino a Rio Grande
 Substâncias citadas: Ecstasy/MDMA · 2 fonte(s)
 > Em uma operação de fiscalização de encomendas enviadas por meio de transportadoras, a Receita Federal apreendeu 100 gramas de MDMA, droga sintética utilizada na produção do ecstasy. O entorpecente foi entregue à Polícia Civil para investigação e descobrir a origem, sendo que o destino era Rio Grande. No início do ano, uma apreensão semelhante vinda do Pará, também foi descoberta pela Receita Federal.
 - [Imprensa] https://ahoradosul.com.br: https://ahoradosul.com.br/conteudos/2026/10/27/receita-federal-apreende-droga-usada-na-fabricacao-de-ecstasy-com-destino-a-rio-grande/
 - [Imprensa] https://www.cliccamaqua.com.br: https://www.cliccamaqua.com.br/noticias/policia/receita-federal-apreende-mdma-encomenda-rio-grande/
 
-## 3. 28/10/2026 · Receita Federal apreende MDMA em encomenda enviada do Pará para Rio Grande
+## 7. 28/10/2026 · Receita Federal apreende MDMA em encomenda enviada do Pará para Rio Grande
 Substâncias citadas: Ecstasy/MDMA · 1 fonte(s)
 - [Imprensa] https://www.studio.tv.br: https://www.studio.tv.br/2026/10/receita-federal-apreende-mdma-em-encomenda-enviada-do-para-para-rio-grande/
 
-## 4. 27/10/2026 · Receita Federal intercepta encomenda com droga sintética em Rio Grande
+## 8. 27/10/2026 · Receita Federal intercepta encomenda com droga sintética em Rio Grande
 Substâncias citadas: Outras sintéticas · 1 fonte(s)
 > Uma operação de fiscalização de rotina da Receita Federal apreendeu um pacote com 100 gramas de MDMA, substância psicoativa associada à produção de ecstasy na manhã desta terça-feira (27). Em um pacote preto, semelhante aos utilizados no envio de compras realizadas pela internet. O volume saiu do estado do Pará, por meio de uma transportadora, e tinha como destino o município de Rio Grande. Após a apreensão, a substância foi encaminhada à Polícia Civil, responsável pela investigação do caso. O remente e o destinatário do pacote não foram informados pela Polícia Civil, para não atrapalhar no an
 - [Imprensa] https://gauchazh.clicrbs.com.br: https://gauchazh.clicrbs.com.br/zona-sul/seguranca/noticia/2026/10/receita-federal-intercepta-encomenda-com-droga-sintetica-em-rio-grande-cmvr1mk1c00mr016nq2xqptro.html
 
-## 5. 23/10/2026 · Receita Federal e PF apreendem ecstasy em centro de distribuição de remessas em Corumbá e prende quatro pessoas
+## 9. 23/10/2026 · Receita Federal e PF apreendem ecstasy em centro de distribuição de remessas em Corumbá e prende quatro pessoas
 Substâncias citadas: Ecstasy/MDMA · 2 fonte(s)
 > Polícia Receita Federal e PF apreendem ecstasy em centro de distribuição de remessas em Corumbá e prende quatro pessoas Sex, 23 Outubro de 2026 | Fonte: Da Redação, com assessoria RFB A Receita Federal do Brasil e a Polícia Federal realizaram, na manhã desta sexta-feira, 23 de outubro, mais uma fiscalização em centros de distribuição de remessas em Corumbá, com apreensão de substância análoga a ecstasy. A atividade contou com a participação de agente canino da Receita Federal, que indicou a presença de substâncias entorpecentes em uma caixa fiscalizada em um dos centros de distribuição, por vo
 - [Imprensa] https://www.correiodecorumbapantanal.com.br: https://www.correiodecorumbapantanal.com.br/policia/receita-federal-e-pf-apreendem-ecstasy-em-centro-de-distribuicao-de-remessas-em-corumba-e-prende-quatro-pessoas
