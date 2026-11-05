@@ -35,15 +35,15 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
 {
 "id": "BR26-059-1",
 "evento_id": "BR26-059",
-"data": "2026-01-09",
-"data_br": "09/01/2026",
+"data": "2026-01-08",
+"data_br": "08/01/2026",
 "ano": 2026,
 "mes": 1,
 "instituicao": "Polícia Rodoviária Federal",
@@ -53,29 +53,29 @@
 "local": "Ibirama/SC",
 "modal": "Rodovia",
 "substancia": "Anfetamina (rebite)",
-"descricao": "Comprimidos de anfetamina com caminhoneiro",
+"descricao": "Cinco cartelas de anfetamina na cabine de caminhão",
 "qtd_kg": null,
-"qtd_unidades": null,
-"unidade": null,
-"quantidade": "Não informada",
-"presos": "Não informado",
-"n_presos": null,
+"qtd_unidades": 66,
+"unidade": "comprimidos",
+"quantidade": "66 comprimidos",
+"presos": "Não",
+"n_presos": 0,
 "arma": "Não informado",
 "dinheiro": "Não informado",
 "tipo_fonte": "Imprensa",
 "fonte_nome": "gcd.com.br",
-"fonte_url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVlRyNzNKVmJqOFh1bkJGSnc5NGpaNUZiemZzMkRWODgxRnRRNThJYWcxRmZ0dzNSR1VHWjk1bENpRGlDWUkwYjhEaE1tSmRTTTA0UTZYWTQ4and4UXYyTndLVjZUeTZHbDhUenFKbFZTRXVCZWZ5aEFYMGswNDZsOGx6eHMxYzc5OXN0d2pONm5ZVjdZMzlfLVNpQTlJU1BJYWxkeEFUTQ?oc=5",
-"observacoes": "Conferir: registro feito a partir do título da notícia (texto completo não acessado). BR-470. Quantidade não verificada. Data aproximada (publicação).",
+"fonte_url": "https://www.gcd.com.br/alto-vale/prf-flagra-caminhoneiro-com-comprimidos-de-rebite-na-br-470-em-ibirama/",
+"observacoes": "BR-470. Caminhoneiro de 27 anos abordado após ultrapassagem proibida; responderá por porte para consumo (encaminhado à DP de Rio do Sul).",
 "arma_detalhe": null,
 "dinheiro_valor": null,
-"presos_qtd": "Não informado",
+"presos_qtd": "0 (TCO por porte para consumo)",
 "armas": "Não informado",
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
-"tipo_ocorrencia": "Não informado",
+"tipo_ocorrencia": "Porte para consumo",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -115,7 +115,7 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -131,9 +131,9 @@
 "uf": "PB",
 "municipio": "Campina Grande",
 "local": "Campina Grande/PB",
-"modal": "Outro",
+"modal": "Remessa postal",
 "substancia": "Ecstasy/MDMA",
-"descricao": "Comprimidos de ecstasy com jovem de 21 anos",
+"descricao": "Comprimidos de ecstasy em remessa retirada em distribuidora",
 "qtd_kg": null,
 "qtd_unidades": 1000,
 "unidade": "comprimidos",
@@ -143,9 +143,9 @@
 "arma": "Não informado",
 "dinheiro": "Não informado",
 "tipo_fonte": "Imprensa",
-"fonte_nome": "portalcorreio.com.br",
-"fonte_url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQzg4SHlJUWhwS25mZGJsdG5rMnlkMF82QnNOZS1VRlB3UUR2eXdMZkxTTXFIVGVHWWFZYW5vOFVudzBveGZSN1VmdzMwa2ljdm9BNzNqdkk0cS1VS0NVUEUyc2dOekVjUmRnelp3dWE1bjhpdlJYd2xtZVJSQmhhTS0tLTBnS1dNcGpQV25vVk1jUWgweWlLWE84N1F4M0ZtaWNLSmVYUWFhRTF2QzVuRVhodi0?oc=5",
-"observacoes": "Conferir: registro feito a partir do título da notícia (texto completo não acessado). Cerca de mil comprimidos; data aproximada (publicação). Fonte secundária: fonte83.com.br.",
+"fonte_nome": "fonte83.com.br",
+"fonte_url": "https://fonte83.com.br/noticias/jovem-de-21-anos-e-flagrada-pela-pf-com-mil-comprimidos-de-ecstasy-em-campina-grande/",
+"observacoes": "Envio acompanhado pela PF; mulher de 21 anos presa em flagrante ao retirar a encomenda (tráfico e associação). Perícia confirmará composição e quantidade exata.",
 "arma_detalhe": null,
 "dinheiro_valor": null,
 "presos_qtd": "1",
@@ -155,8 +155,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "g1.globo.com",
+"url": "https://g1.globo.com/pb/paraiba/noticia/2026/02/10/mulher-e-presa-apos-receber-encomenda-com-mil-compridos-ecstasy-em-campina-grande.ghtml"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -195,7 +200,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -235,7 +240,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -275,8 +280,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "novonoticias.com.br",
+"url": "https://novonoticias.com.br/video-rn-tem-maior-apreensao-de-ecstasy-da-historia-53-mil-comprimidos-sao-interceptados-em-natal/"
+},
+{
+"nome": "difusoramossoro.com.br",
+"url": "https://difusoramossoro.com.br/policia-civil-do-rn-realiza-maior-apreensao-de-ecstasy-da-historia-do-estado-e-prende-suspeito-em-natal-2/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -315,8 +329,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "g1.globo.com",
+"url": "https://g1.globo.com/df/distrito-federal/noticia/2026/03/11/mulher-e-presa-com-drogas-amarradas-ao-corpo-no-aeroporto-de-brasilia.ghtml"
+},
+{
+"nome": "correiobraziliense.com.br",
+"url": "https://www.correiobraziliense.com.br/cidades-df/2026/03/7373040-estrangeira-e-presa-no-aeroporto-de-brasilia-com-42-kg-de-metanfetamina.html"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -344,8 +367,8 @@
 "dinheiro": "Não informado",
 "tipo_fonte": "Imprensa",
 "fonte_nome": "correiodopovo.com.br",
-"fonte_url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPNEs4Sk1TaFF6MHAybjB1N1drNkl5MWlRLUl6UzVRNUF2YV95eGVqTnFRakpqNXhuNkFHdE5jTGd2TXRDYmpBdlhCZmxvWWdTbG1UV1pnYjMzM1dkRDhoc05MQk1Ca3JzcWx6UEE1SW5qcHZGM3V1azVxR2dIcEZYbmRVck1RTll4REVoeFlZOFJPelZaV240SjhtcFFCQkh1MGpyN1NCNEp6b3hEX0ExMUNiWGhuQ0NBS3d3bVpoT1Z2Uk1qYjJfNGNoNXNvY3BSWlZOdlBlSDVVa2VNcGhIYjJvcWVhX2I3TFE?oc=5",
-"observacoes": "Conferir: registro feito a partir do título da notícia (texto completo não acessado). Caminhoneiro preso por porte ilegal de arma de fogo; quantidade de rebite e tipo de arma não verificados. Data aproximada (publicação).",
+"fonte_url": "https://www.correiodopovo.com.br/not%C3%ADcias/pol%C3%ADcia/prf-prende-caminhoneiro-por-porte-ilegal-de-arma-de-fogo-e-uso-de-rebites-em-sarandi-1.1697808",
+"observacoes": "Conferir: texto da matéria bloqueado para leitura automática; dados do título. Caminhoneiro preso por porte ilegal de arma de fogo; quantidade de rebite e tipo de arma não verificados. Data aproximada (publicação).",
 "arma_detalhe": "arma de fogo (tipo não verificado)",
 "dinheiro_valor": null,
 "presos_qtd": "1",
@@ -355,7 +378,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -395,7 +418,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -435,7 +458,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -475,7 +498,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -515,7 +538,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -555,7 +578,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -595,7 +618,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 7,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -635,7 +658,7 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -675,8 +698,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "oglobo.globo.com",
+"url": "https://oglobo.globo.com/rio/noticia/2026/05/15/drogas-enviadas-pelos-correios-operacao-da-receita-no-rio-de-janeiro-apreende-mais-de-r-1-milhao.ghtml"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -715,8 +743,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "oglobo.globo.com",
+"url": "https://oglobo.globo.com/rio/noticia/2026/05/15/drogas-enviadas-pelos-correios-operacao-da-receita-no-rio-de-janeiro-apreende-mais-de-r-1-milhao.ghtml"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -755,7 +788,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -795,7 +828,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -835,7 +868,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -875,7 +908,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -915,8 +948,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "aredacao.com.br",
+"url": "https://aredacao.com.br/prf-apreende-45-mil-comprimidos-de-rebite-em-porangatu/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -955,8 +993,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "diariodaamazonia.com.br",
+"url": "https://diariodaamazonia.com.br/noticia/5/440698/video-denarc-e-receita-federal-apreendem-1046-comprimidos-de-ecstasy-em-transportadora-de-porto-velho"
+},
+{
+"nome": "gentedeopiniao.com.br",
+"url": "https://www.gentedeopiniao.com.br/policia/policia-civil-apreende-mais-de-mil-comprimidos-de-ecstasy-durante-operacao-integrada-em-porto-velho"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -995,7 +1042,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1035,7 +1082,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1075,7 +1122,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1115,7 +1162,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1155,7 +1202,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 7,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1195,7 +1242,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 7,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1235,8 +1282,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "sindireceita.org.br",
+"url": "https://sindireceita.org.br/noticias/2026/06/16/analistas-tributarios-apreendem-35-kg-de-metanfetamina-no-aeroporto-de-brasilia"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -1264,8 +1316,8 @@
 "dinheiro": "Não informado",
 "tipo_fonte": "Imprensa",
 "fonte_nome": "diariodovale.com.br",
-"fonte_url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZl9nUGxFNWxhT0luMDRuLWYtd21idUVGTTI4Um1fSlJ4RTFvYmVGVnM3U1lqdGVuWjdoSzU0aEJBb0EtaHp6b0RzMTRIMVhUWEFkMHRiZVpWZDNZMGVpbXFPXzBkd2RZMGNpc0lhNUNtX282TFlrOUdqaERCSkc2MUY3QWZ1WUNlSWc0T2FQMWVBcjFsMUFMQzFn?oc=5",
-"observacoes": "Conferir: registro feito a partir do título da notícia (texto completo não acessado). Via Dutra. Quantidade não verificada. Data aproximada (publicação).",
+"fonte_url": "https://diariodovale.com.br/destaque/prf-flagra-caminhoneiro-com-rebitena-dutra-em-porto-real/",
+"observacoes": "Conferir: texto da matéria bloqueado para leitura automática; dados do título. Via Dutra. Quantidade não verificada. Data aproximada (publicação).",
 "arma_detalhe": null,
 "dinheiro_valor": null,
 "presos_qtd": "Não informado",
@@ -1275,7 +1327,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1315,7 +1367,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1355,8 +1407,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "folhams.com.br",
+"url": "https://folhams.com.br/2026/06/22/receita-federal-apreende-21-toneladas-de-solvente-usado-na-producao-de-cocaina-em-corumba/"
+},
+{
+"nome": "diarionline.com.br",
+"url": "https://diarionline.com.br/?s=noticia&id=157639"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -1395,7 +1456,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1435,7 +1496,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1475,7 +1536,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1515,8 +1576,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "aredacao.com.br",
+"url": "https://aredacao.com.br/caminhoneiro-e-preso-com-cerca-de-3-mil-comprimidos-de-rebite-na-br-153-em-porangatu/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -1555,7 +1621,7 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "itatiaia.com.br",
@@ -1600,7 +1666,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1640,7 +1706,7 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1680,7 +1746,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1720,7 +1786,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "metropoles.com",
@@ -1773,8 +1839,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "g1.globo.com",
+"url": "https://g1.globo.com/df/distrito-federal/noticia/2026/08/10/brasileiro-e-flagrado-com-24-kg-de-metanfetamina-em-mala-e-mochila-no-aeroporto-de-brasilia.ghtml"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -1813,7 +1884,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1853,7 +1924,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -1893,7 +1964,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "correiodecorumbapantanal.com.br",
@@ -1946,7 +2017,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "correiodecorumbapantanal.com.br",
@@ -1999,7 +2070,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "pontaporainforma.com.br",
@@ -2044,7 +2115,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 2,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -2084,8 +2155,17 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "diariodorn.com.br",
+"url": "https://diariodorn.com.br/prf-flagra-caminhao-com-excesso-de-peso-e-apreende-rebite-na-br-304-em-assu/"
+},
+{
+"nome": "98fmnatal.com.br",
+"url": "https://98fmnatal.com.br/policia/caminhoneiro-flagrado-anfetaminas-carga-irregular-br-304-assu-rn/375967/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2102,30 +2182,35 @@
 "local": "Montes Claros/MG",
 "modal": "Rodovia",
 "substancia": "Anfetamina (rebite)",
-"descricao": "Comprimidos de anfetamina com caminhoneiro sob efeito da droga",
+"descricao": "Comprimidos de anfetamina entregues por caminhoneiro após furar bloqueio de obras",
 "qtd_kg": null,
 "qtd_unidades": 75,
 "unidade": "comprimidos",
 "quantidade": "75 comprimidos",
-"presos": "Não informado",
-"n_presos": null,
+"presos": "Não",
+"n_presos": 0,
 "arma": "Não informado",
 "dinheiro": "Não informado",
 "tipo_fonte": "Imprensa",
 "fonte_nome": "otempo.com.br",
 "fonte_url": "https://www.otempo.com.br/cidades/2026/8/21/sem-descanso-obrigatorio-caminhoneiro-e-flagrado-sob-efeito-de-drogas-e-com-75-rebites-em-mg",
-"observacoes": "BR-251. Motorista confessou uso durante a viagem; desfecho (TCO ou prisão) não informado no trecho disponível.",
+"observacoes": "BR-251. Motorista de 42 anos avançou bloqueio pare-siga e quase atingiu funcionário; confessou uso durante a viagem. TCO por crimes de menor potencial ofensivo (manchetes falam em prisão, mas o desfecho foi TCO).",
 "arma_detalhe": null,
 "dinheiro_valor": null,
-"presos_qtd": "Não informado",
+"presos_qtd": "0 (TCO por porte para consumo)",
 "armas": "Não informado",
 "dinheiro_txt": "Não informado",
 "classe": "Droga sintética",
-"tipo_ocorrencia": "Não informado",
+"tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "itatiaia.com.br",
+"url": "https://www.itatiaia.com.br/noticias/motorista-e-preso-com-comprimidos-de-rebite-apos-furar-bloqueio-na-br-251-em-montes-claros/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2164,8 +2249,13 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "g1.globo.com",
+"url": "https://g1.globo.com/rj/sul-do-rio-costa-verde/noticia/2026/08/26/caminhoneiro-e-flagrado-com-rebite-e-maconha-durante-fiscalizacao-na-via-dutra-em-barra-mansa.ghtml"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2204,8 +2294,13 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 5,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "clubenoticia.com.br",
+"url": "https://clubenoticia.com.br/prf-apreende-mais-de-200-quilos-de-maconha-em-duas-acoes-e-prende-tres-suspeitos-na-br-365-em-patos-de-minas/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2244,8 +2339,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "correio24horas.com.br",
+"url": "https://www.correio24horas.com.br/salvador/carga-de-mdma-avaliada-em-r-2-milhoes-e-apreendida-em-salvador-0826"
+},
+{
+"nome": "ba.gov.br",
+"url": "http://www.ba.gov.br/ssp/noticias/2026-08/89601/acao-integrada-apreende-3kg-de-droga-avaliada-em-mais-de-r-2-milhoes-em"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2284,8 +2388,13 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "gazetadigital.com.br",
+"url": "https://www.gazetadigital.com.br/editorias/policia/prf-apreende-53-kg-de-mercurio-e-anfetamina-e-prende-condutor-na-br-070-em-barra-do-garcas/858111"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2324,8 +2433,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "diarionline.com.br",
+"url": "https://www.diarionline.com.br/index.php?s=noticia&id=158853"
+},
+{
+"nome": "folhams.com.br",
+"url": "https://folhams.com.br/2026/09/02/receita-federal-pf-apreendem-ecstasy-corumba/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2364,8 +2482,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "otempobetim.com.br",
+"url": "https://www.otempobetim.com.br/cidades/2026/9/10/homem-e-preso-em-betim-com-lsd-metanfetamina-e-crumble-no-dia-do-aniversario"
+},
+{
+"nome": "portalagita.com.br",
+"url": "https://portalagita.com.br/prf-apreende-drogas-em-veiculo-na-br-381-em-betim-e-prende-motorista-no-dia-do-aniversario/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2404,8 +2531,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "otempobetim.com.br",
+"url": "https://www.otempobetim.com.br/cidades/2026/9/10/homem-e-preso-em-betim-com-lsd-metanfetamina-e-crumble-no-dia-do-aniversario"
+},
+{
+"nome": "portalagita.com.br",
+"url": "https://portalagita.com.br/prf-apreende-drogas-em-veiculo-na-br-381-em-betim-e-prende-motorista-no-dia-do-aniversario/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2444,8 +2580,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "diarionline.com.br",
+"url": "https://diarionline.com.br/?s=noticia&id=159002"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2484,7 +2625,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 6,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -2524,8 +2665,13 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "itatiaia.com.br",
+"url": "https://www.itatiaia.com.br/montesclaros/motorista-e-detido-com-maconha-e-24-comprimidos-de-rebite-durante-fiscalizacao-na-br-251-em-salinas/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2564,7 +2710,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "barbacenamais.com.br",
@@ -2613,8 +2759,17 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "sindireceita.org.br",
+"url": "https://sindireceita.org.br/noticias/2026/09/21/analistas-tributarios-atuam-na-apreensao-de-15-toneladas-de-solvente-em-corumbams"
+},
+{
+"nome": "rcn67.com.br",
+"url": "https://www.rcn67.com.br/campo-grande/15-toneladas-de-produto-usado-na-producao-de-cocaina-sao-apreendidas-em-corumba/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2653,7 +2808,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "portalsalvadorfm.com.br",
@@ -2698,7 +2853,7 @@
 "tipo_ocorrencia": "Não informado",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "portalsalvadorfm.com.br",
@@ -2743,8 +2898,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "radiocacula.com.br",
+"url": "https://www.radiocacula.com.br/prf-apreende-mais-de-6kg-de-drogas-em-carro-de-aplicativo-em-tres-lagoas/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2783,8 +2943,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "radiocacula.com.br",
+"url": "https://www.radiocacula.com.br/prf-apreende-mais-de-6kg-de-drogas-em-carro-de-aplicativo-em-tres-lagoas/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2823,8 +2988,13 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "radiocacula.com.br",
+"url": "https://www.radiocacula.com.br/prf-apreende-mais-de-6kg-de-drogas-em-carro-de-aplicativo-em-tres-lagoas/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -2863,7 +3033,7 @@
 "tipo_ocorrencia": "Porte para consumo",
 "lote": 4,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -2903,7 +3073,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 1,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -2942,8 +3112,8 @@
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
 "lote": 8,
-"novo": "Novo",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"novo": "",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "maismaranhao.com.br",
@@ -2987,8 +3157,8 @@
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Não informado",
 "lote": 8,
-"novo": "Novo",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"novo": "",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "maismaranhao.com.br",
@@ -3033,7 +3203,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 3,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [
 {
 "nome": "jd1noticias.com",
@@ -3082,7 +3252,7 @@
 "tipo_ocorrencia": "Tráfico",
 "lote": 7,
 "novo": "",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
 },
@@ -3121,9 +3291,18 @@
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
 "lote": 8,
-"novo": "Novo",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
-"fontes_extra": [],
+"novo": "",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "diariodonordeste.verdesmares.com.br",
+"url": "https://diariodonordeste.verdesmares.com.br/seguranca/receita-federal-apreende-2-mil-comprimidos-de-ecstasy-escondidos-em-encomenda-postal-em-fortaleza-1.3800651"
+},
+{
+"nome": "cn7.com.br",
+"url": "https://cn7.com.br/drogas-enviadas-do-rj-sao-interceptadas-pela-receita-em-transportadoras-de-fortaleza/"
+}
+],
 "sintetica": "Sim"
 },
 {
@@ -3161,9 +3340,138 @@
 "classe": "Droga sintética",
 "tipo_ocorrencia": "Tráfico",
 "lote": 8,
-"novo": "Novo",
-"atualizado_em": "2026-10-23T16:19:00-03:00",
+"novo": "",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"fontes_extra": [
+{
+"nome": "diariodonordeste.verdesmares.com.br",
+"url": "https://diariodonordeste.verdesmares.com.br/seguranca/receita-federal-apreende-2-mil-comprimidos-de-ecstasy-escondidos-em-encomenda-postal-em-fortaleza-1.3800651"
+},
+{
+"nome": "cn7.com.br",
+"url": "https://cn7.com.br/drogas-enviadas-do-rj-sao-interceptadas-pela-receita-em-transportadoras-de-fortaleza/"
+}
+],
+"sintetica": "Sim"
+},
+{
+"id": "BR26-069-1",
+"evento_id": "BR26-069",
+"data": "2026-10-23",
+"data_br": "23/10/2026",
+"ano": 2026,
+"mes": 10,
+"instituicao": "Receita Federal",
+"orgaos_envolvidos": "Receita Federal + PF",
+"uf": "MS",
+"municipio": "Corumbá",
+"local": "Corumbá/MS",
+"modal": "Remessa postal",
+"substancia": "Ecstasy/MDMA",
+"descricao": "Substância análoga a ecstasy em caixa em centro de distribuição de remessas",
+"qtd_kg": 1.1,
+"qtd_unidades": null,
+"unidade": null,
+"quantidade": "1,1 kg",
+"presos": "Sim",
+"n_presos": 4,
+"arma": "Não informado",
+"dinheiro": "Não informado",
+"tipo_fonte": "Imprensa",
+"fonte_nome": "correiodecorumbapantanal.com.br",
+"fonte_url": "https://www.correiodecorumbapantanal.com.br/policia/receita-federal-e-pf-apreendem-ecstasy-em-centro-de-distribuicao-de-remessas-em-corumba-e-prende-quatro-pessoas",
+"observacoes": "~1,1 kg. Cão de faro da Receita indicou a caixa; entrega acompanhada. Três bolivianos e uma brasileira detidos ao retirar a encomenda e levados à PF. Texto com assessoria da Receita; a parceria já soma 10 apreensões de sintéticos em Corumbá.",
+"arma_detalhe": null,
+"dinheiro_valor": null,
+"presos_qtd": "4",
+"armas": "Não informado",
+"dinheiro_txt": "Não informado",
+"classe": "Droga sintética",
+"tipo_ocorrencia": "Tráfico",
+"lote": 9,
+"novo": "",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
 "fontes_extra": [],
 "sintetica": "Sim"
+},
+{
+"evento_id": "BR26-070",
+"data": "2026-11-03",
+"data_br": "03/11/2026",
+"ano": 2026,
+"mes": 11,
+"instituicao": "Polícia Rodoviária Federal",
+"orgaos_envolvidos": "PRF",
+"uf": "SC",
+"municipio": "Chapecó",
+"local": "Chapecó/SC",
+"modal": "Rodovia",
+"classe": "Droga sintética",
+"sintetica": "Sim",
+"qtd_kg": null,
+"presos": "Não informado",
+"n_presos": null,
+"presos_qtd": "Não informado (encaminhado à PF; responderá por tráfico)",
+"arma": "Não informado",
+"arma_detalhe": null,
+"armas": "Não informado",
+"dinheiro": "Não informado",
+"dinheiro_valor": null,
+"dinheiro_txt": "Não informado",
+"tipo_fonte": "Oficial",
+"fonte_nome": "gov.br/prf",
+"fonte_url": "https://www.gov.br/prf/pt-br/noticias/estaduais/santa-catarina/2026/novembro/prf-intercepta-carregamento-de-drogas-em-chapeco",
+"fontes_extra": [],
+"tipo_ocorrencia": "Tráfico",
+"id": "BR26-070-1",
+"substancia": "Ecstasy/MDMA",
+"descricao": "Comprimidos de ecstasy no porta-malas de automóvel",
+"qtd_unidades": 453,
+"unidade": "comprimidos",
+"quantidade": "453 comprimidos",
+"observacoes": "BR-282. Motorista de 24 anos (PR) desviou para um posto ao ver a viatura; disse estar perto do destino da entrega. Também 10 kg de skunk e 2,24 kg de haxixe (fora do painel). Encaminhado à PF, onde responderá por tráfico; a nota não usa o termo prisão.",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"novo": "Novo",
+"lote": 10
+},
+{
+"evento_id": "BR26-070",
+"data": "2026-11-03",
+"data_br": "03/11/2026",
+"ano": 2026,
+"mes": 11,
+"instituicao": "Polícia Rodoviária Federal",
+"orgaos_envolvidos": "PRF",
+"uf": "SC",
+"municipio": "Chapecó",
+"local": "Chapecó/SC",
+"modal": "Rodovia",
+"classe": "Droga sintética",
+"sintetica": "Sim",
+"qtd_kg": null,
+"presos": "Não informado",
+"n_presos": null,
+"presos_qtd": "Não informado (encaminhado à PF; responderá por tráfico)",
+"arma": "Não informado",
+"arma_detalhe": null,
+"armas": "Não informado",
+"dinheiro": "Não informado",
+"dinheiro_valor": null,
+"dinheiro_txt": "Não informado",
+"tipo_fonte": "Oficial",
+"fonte_nome": "gov.br/prf",
+"fonte_url": "https://www.gov.br/prf/pt-br/noticias/estaduais/santa-catarina/2026/novembro/prf-intercepta-carregamento-de-drogas-em-chapeco",
+"fontes_extra": [],
+"tipo_ocorrencia": "Tráfico",
+"id": "BR26-070-2",
+"substancia": "LSD",
+"descricao": "Micropontos de LSD no porta-malas de automóvel",
+"qtd_unidades": 77,
+"unidade": "micropontos",
+"quantidade": "77 micropontos",
+"observacoes": "Mesmo evento da linha anterior.",
+"atualizado_em": "2026-11-05T11:42:00-03:00",
+"novo": "Novo",
+"lote": 10
 }
 ]
